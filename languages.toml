@@ -2,6 +2,18 @@
 command = "pyrefly"
 args = ["lsp"]
 
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
 [[language]]
 name = "python"
-language-servers = ["pyrefly"]
+language-servers = ["pyrefly", "ruff"]
+auto-format = true
+formatter = { command = "ruff", args = ["format", "-" ] }
+
+
+[[language]]
+name = "go"
+auto-format = true
+formatter = ["gofmt"]
