@@ -2,7 +2,9 @@ theme = "gruber-darker"
 
 [editor]
 line-number = "relative"
-auto-reload = true
+
+[keys.normal]
+"C-r" = ":reload-all"
 
 [editor.cursor-shape]
 insert = "bar"
